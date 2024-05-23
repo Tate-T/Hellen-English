@@ -8,16 +8,15 @@
   --tonya_text-color: #3d3d3d;
 }
 .container {
-  width: 1344px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: solid red;
+  max-width: 1344px;
 }
 /* header */
-.header{
-  outline: solid peru;
+.header {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -36,6 +35,14 @@
   font-weight: 800;
   line-height: normal;
   letter-spacing: 1.04px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+.header-box {
+  display: flex;
+  gap: 4px;
 }
 .header-img {
   width: 22px;
@@ -99,20 +106,25 @@
 }
 .header-list {
   display: flex;
-  padding-left: 143.59px;
-  padding-right: 59.92px;
-  gap: 39.94px;
+  gap: 40px;
+}
+.header-navigation {
+  margin-left: auto;
+  margin-right: 60px;
 }
 /* hero */
-.hero{
-  outline: solid yellow;
+.hero {
   padding-bottom: 30px;
+  background-color: #fff;
 }
 .hero-container {
   display: flex;
 }
+.hero-subcontainer {
+  padding-top: 55px;
+}
 .hero-title {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   color: #111518;
   font-family: Montserrat;
   font-size: 58px;
@@ -131,7 +143,7 @@
   letter-spacing: 1.6px;
 }
 .hero-text {
-  padding-bottom: 45px;
+  margin-bottom: 45px;
   color: #111518;
   font-family: Montserrat;
   font-size: 20px;
@@ -167,8 +179,7 @@
   flex-shrink: 0;
 }
 /* information */
-.information{
-  outline: solid red;
+.information {
   padding-top: 118px;
   padding-bottom: 148px;
 }
@@ -177,10 +188,8 @@
   gap: 128px;
 }
 .information-text {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-shrink: 0;
   color: #111518;
   font-family: Montserrat;
   font-size: 20px;
@@ -189,12 +198,39 @@
   line-height: 164.9%; /* 32.98px */
   letter-spacing: 1.6px;
 }
+.information-text::before {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  content: "";
+  display: block;
+  background-image: url(../img/square.webp), url(../img/student.webp);
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.information-item:nth-child(2) .information-text::before {
+  background-image: url(../img/square.webp), url(../img/mobile-learning.webp);
+}
+.information-item:nth-child(3) .information-text::before {
+  background-image: url(../img/square.webp), url(../img/insurance.webp);
+}
+.information-item {
+  position: relative;
+  width: 417px;
+  padding-left: 82px;
+}
 /* problems */
 .problems {
   background-color: #111518;
   outline: solid purple;
   padding-top: 100px;
   padding-bottom: 280px;
+  background-image: url(../img/fire.webp);
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 .problems-title {
   width: 805px;
@@ -218,20 +254,27 @@
   letter-spacing: 1.38px;
 }
 /* shedule */
-.shedule{
-  outline: solid black;
+.shedule {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 113px;
+  padding-right: 113px;
   padding-top: 67px;
   padding-bottom: 67px;
+  box-shadow: -5px 8px 26px 0px rgba(0, 0, 0, 0.04);
+  max-width: 1344px;
 }
 .shedule-list {
   display: flex;
-  gap: 40px;
+  gap: 40px 30px;
+  flex-wrap: wrap;
 }
-.shedule-padding-text {
-  padding-bottom: 105px;
+.shedule-item {
+  min-height: 99px;
+  max-width: 336px;
+  width: 100%;
 }
 .shedule-number {
-  padding-bottom: 10px;
   color: #ff6b09;
   font-family: Montserrat;
   font-size: 20px;
@@ -239,6 +282,21 @@
   font-weight: 700;
   line-height: 164.9%; /* 32.98px */
   letter-spacing: 1.6px;
+  padding-left: 30px;
+}
+.shedule-margin-number {
+  margin-bottom: 10px;
+}
+.shedule-number::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #ff6b09;
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 30px;
+  position: relative;
 }
 .shedule-text {
   color: #111518;
@@ -250,12 +308,9 @@
   letter-spacing: 1.6px;
 }
 /* work */
-.work{
+.work {
   padding-top: 130px;
   padding-bottom: 130px;
-}
-.work-container {
-  outline: solid orange;
 }
 .work-title {
   padding-bottom: 47px;
@@ -270,12 +325,12 @@
 .work-list {
   gap: 30px;
   display: flex;
+  flex-wrap: wrap;
 }
 .work-padding-item {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .work-subtitle {
-  padding-bottom: 32px;
   color: #111518;
   text-align: center;
   font-family: Montserrat;
@@ -284,6 +339,55 @@
   font-weight: 700;
   line-height: 28px; /* 140% */
   letter-spacing: 1.6px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.work-subtitle::before {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  background-image: url(../img/study-program.webp);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 40%;
+  top: -83px;
+}
+.work-item:nth-child(2) .work-subtitle::before {
+  background-image: url(../img/mobile-learning2.webp);
+}
+
+.work-item:nth-child(3) .work-subtitle::before {
+  background-image: url(../img/mobile-learning2.webp);
+}
+
+.work-item:nth-child(4) .work-subtitle::before {
+  background-image: url(../img/union.webp);
+}
+
+.work-item:nth-child(5) .work-subtitle::before {
+  background-image: url(../img/female-student2.webp);
+}
+
+.work-item:nth-child(6) .work-subtitle::before {
+  background-image: url(../img/audio-book.webp);
+}
+.work-item:hover .work-subtitle::before {
+  background-color: #fff;
+}
+.work-subtitle::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #ff6b09;
+  display: block;
+  position: absolute;
+  position: relative;
+  background-position: center;
+  position: absolute;
+  bottom:-15px;
+  left: 45%;
 }
 .work-text {
   color: #b9b9b9;
@@ -295,27 +399,49 @@
   line-height: 28px; /* 155.556% */
   letter-spacing: 1.44px;
 }
+.work-item {
+  width: 418px;
+  height: 396px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0px 8px 26px 0px rgba(0, 0, 0, 0.1);
+  padding-top: 118px;
+  padding-bottom: 55px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+.work-item:hover {
+  background: #ff6b09;
+  box-shadow: 0px 8px 26px 0px rgba(0, 0, 0, 0.1);
+}
+.work-item:hover .work-text,
+.work-item:hover .work-subtitle {
+  color: #fff;
+}
 /* plan */
 .plan {
   background-color: #111518;
   padding-top: 120px;
   padding-bottom: 326px;
+  background-image: url(../img/background-test.webp);
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 .plan-list {
   display: flex;
   gap: 46px;
 }
 .plan-subtitle {
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 .plan-name {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .plan-text {
   margin-bottom: 25px;
 }
 .plan-title {
-  padding-bottom: 106px;
+  margin-bottom: 106px;
   color: #fff;
   font-family: Montserrat;
   font-size: 46px;
@@ -369,7 +495,7 @@
   flex-shrink: 0;
 } */
 /* teacher */
-.teacher{
+.teacher {
   padding-top: 130px;
   padding-bottom: 129px;
 }
@@ -440,8 +566,8 @@
   text-decoration-line: underline;
 }
 /* guarantee */
-.guarantee{
-padding-bottom: 130px;
+.guarantee {
+  padding-bottom: 130px;
 }
 .guarantee-title {
   padding-bottom: 50px;
@@ -476,8 +602,8 @@ padding-bottom: 130px;
   line-height: 28px;
 }
 /* feedback */
-.feedback{
-padding-bottom: 230px;
+.feedback {
+  padding-bottom: 230px;
 }
 .feedback-title {
   padding-bottom: 100px;
@@ -624,7 +750,7 @@ padding-bottom: 230px;
   text-transform: uppercase;
 }
 /* footer */
-.footer{
+.footer {
   padding-top: 57px;
   padding-bottom: 20px;
 }
