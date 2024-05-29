@@ -671,8 +671,8 @@
   font-weight: 500;
   line-height: 28px;
 }
-.guarantee-item:last-child .guarantee-line-text::after{
-display: none;
+.guarantee-item:last-child .guarantee-line-text::after {
+  display: none;
 }
 /* feedback */
 .feedback {
@@ -689,6 +689,11 @@ display: none;
   line-height: 130%; /* 59.8px */
   letter-spacing: 1.38px;
 }
+.feedback-flex {
+  display: flex;
+  align-items: center;
+  gap: 58px;
+}
 .feedback-main-box {
   display: flex;
   width: 1090px;
@@ -701,8 +706,11 @@ display: none;
   padding-right: 112px;
   align-items: center;
 }
-.feedback-box{
+.feedback-box {
   padding-left: 60px;
+}
+.feedback-button {
+  background-color: transparent;
 }
 .feedback-subtitle {
   margin-bottom: 10px;
@@ -779,6 +787,23 @@ display: none;
   font-weight: 800;
   line-height: 130%; /* 59.8px */
   letter-spacing: 1.38px;
+  margin-left: 254px;
+  margin-right: 260px;
+}
+.registration-form {
+  margin-left: 416px;
+  margin-right: 416px;
+}
+.registration-name {
+  background-color: transparent;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.6px;
+  padding-left: 40px;
 }
 .registration-text {
   margin-bottom: 56px;
@@ -790,6 +815,8 @@ display: none;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2.4px;
+  margin-left: 153px;
+  margin-right: 154px;
 }
 .registration-padding-name {
   margin-bottom: 30px;
@@ -842,13 +869,16 @@ display: none;
 .footer {
   padding-top: 57px;
   padding-bottom: 20px;
+  height: 150px;
+}
+.footer-logo {
+  margin-right: 290px;
 }
 .footer-info {
   display: flex;
-  gap: 350px;
+  padding-bottom: 53px;
 }
 .footer-history {
-  margin-top: 73px;
   color: #b9b9b9;
   font-family: Montserrat;
   font-size: 14px;
@@ -865,4 +895,35 @@ display: none;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2.4px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footer-insta {
+  position: relative;
+  margin-left: 56px;
+  display: block;
+}
+.footer-insta img {
+  width: 40px;
+  height: 40px;
+}
+.footer-insta::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 40px;
+  background-color: #b9b9b9;
+  position: absolute;
+  left: -26px;
+}
+.history {
+  background-color: #111518;
+  height: 67px;
+  display: flex;
+  align-items: center;
+}
+.footer-container{
+  display: flex;
+  align-items: center;
 }
