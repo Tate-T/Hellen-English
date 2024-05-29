@@ -386,7 +386,7 @@
   position: relative;
   background-position: center;
   position: absolute;
-  bottom:-15px;
+  bottom: -15px;
   left: 45%;
 }
 .work-text {
@@ -423,9 +423,9 @@
   background-color: #111518;
   padding-top: 120px;
   padding-bottom: 326px;
-  background-image: url(../img/background-test.webp);
-  background-repeat: no-repeat;
-  background-position: left bottom;
+}
+.plan-container {
+  position: relative;
 }
 .plan-list {
   display: flex;
@@ -489,11 +489,16 @@
   letter-spacing: 1.44px;
   opacity: 0.5;
 }
-/* .plan-img {
+.plan-img {
   width: 672px;
   height: 502px;
-  flex-shrink: 0;
-} */
+  position: absolute;
+  bottom: -326px;
+  left: -157px;
+}
+.plan-item {
+  max-width: 226px;
+}
 /* teacher */
 .teacher {
   padding-top: 130px;
@@ -527,7 +532,7 @@
   line-height: 28px;
 }
 .teacher-name {
-  padding-bottom: 45px;
+  margin-bottom: 45px;
   color: #111518;
   font-family: Montserrat;
   font-size: 30px;
@@ -535,6 +540,17 @@
   font-weight: 800;
   line-height: normal;
   letter-spacing: 2.4px;
+  position: relative;
+}
+.teacher-name::after {
+  content: "";
+  background-color: #b9b9b9;
+  width: 640px;
+  height: 1px;
+  display: block;
+  bottom: -15px;
+  position: absolute;
+  left: 0;
 }
 .teacher-text {
   color: #111518;
@@ -544,15 +560,39 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.96px;
+  padding-left: 49px;
+  position: relative;
 }
-.teacher-padding-item {
-  padding-bottom: 30px;
+.teacher-text::before {
+  content: "";
+  background-image: url(../img/check_mark.webp);
+  display: block;
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+}
+.teacher-line-text {
+  position: relative;
+}
+.teacher-line-text::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #ff6b09;
+  display: block;
+  position: absolute;
+  bottom: -43px;
+  left: -3px;
+}
+.teacher-margin-item {
+  margin-bottom: 30px;
 }
 .teacher-list {
-  padding-bottom: 88px;
+  margin-bottom: 88px;
 }
-.teacher-padding-recomendation {
-  padding-bottom: 28px;
+.teacher-margin-recomendation {
+  margin-bottom: 28px;
 }
 .teacher-link {
   display: block;
@@ -582,6 +622,15 @@
   line-height: 130%; /* 59.8px */
   letter-spacing: 1.38px;
 }
+.guarantee-box {
+  background-color: #f1f1f1;
+  width: 1314px;
+  height: 395px;
+  padding-top: 50px;
+  padding-bottom: 45px;
+  padding-left: 164px;
+  padding-right: 112px;
+}
 .guarantee-padding-item {
   padding-bottom: 20px;
 }
@@ -592,6 +641,27 @@
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
+  position: relative;
+}
+.guarantee-text::before {
+  content: "";
+  width: 22px;
+  height: 30px;
+  background-image: url(../img/сampfire.webp);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+.guarantee-line-text::after {
+  content: "";
+  width: 1px;
+  height: 40px;
+  background-image: url(../img/line.webp);
+  display: block;
+  position: absolute;
+  left: -20px;
+  bottom: -19px;
 }
 .guarantee-span {
   color: #ff6b09;
@@ -601,12 +671,15 @@
   font-weight: 500;
   line-height: 28px;
 }
+.guarantee-item:last-child .guarantee-line-text::after{
+display: none;
+}
 /* feedback */
 .feedback {
   padding-bottom: 230px;
 }
 .feedback-title {
-  padding-bottom: 100px;
+  margin-bottom: 100px;
   color: #111518;
   text-align: center;
   font-family: Montserrat;
@@ -618,9 +691,21 @@
 }
 .feedback-main-box {
   display: flex;
+  width: 1090px;
+  height: 370px;
+  background: #fff;
+  box-shadow: -5px 8px 26px 0px rgba(0, 0, 0, 0.04);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 82px;
+  padding-right: 112px;
+  align-items: center;
+}
+.feedback-box{
+  padding-left: 60px;
 }
 .feedback-subtitle {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   color: #ff6b09;
   font-family: Montserrat;
   font-size: 30px;
@@ -630,7 +715,7 @@
   letter-spacing: 2.4px;
 }
 .feedback-info {
-  padding-bottom: 18px;
+  margin-bottom: 18px;
   color: #b9b9b9;
   font-family: Montserrat;
   font-size: 14px;
@@ -643,6 +728,8 @@
   margin-top: 91px;
   display: flex;
   gap: 30px;
+  padding-left: 326px;
+  padding-right: 324px;
 }
 .feedback-img {
   border-radius: 150px;
@@ -683,7 +770,7 @@
   padding-bottom: 62px;
 }
 .registration-title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   color: #fff;
   text-align: center;
   font-family: Montserrat;
@@ -694,7 +781,7 @@
   letter-spacing: 1.38px;
 }
 .registration-text {
-  padding-bottom: 56px;
+  margin-bottom: 56px;
   color: #fff;
   text-align: center;
   font-family: Montserrat;
@@ -709,6 +796,8 @@
 }
 .registration-button {
   margin-top: 80px;
+  margin-right: 480px;
+  margin-left: 480px;
 }
 .registration-word {
   color: #ff6b09;
