@@ -10,6 +10,9 @@
 body {
   font-family: Montserrat;
 }
+a:hover, button:hover{
+  transition: all 1s;
+}
 .container {
   width: 100%;
   margin-left: auto;
